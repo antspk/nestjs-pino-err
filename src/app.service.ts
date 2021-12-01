@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
+import { AppError } from './app.error';
 
 @Injectable()
 export class AppService {
   getHello(): string {
-    return 'Hello World!';
+    throw new AppError('App Error Test Message');
   }
 }
